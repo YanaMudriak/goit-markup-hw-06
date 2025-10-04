@@ -136,7 +136,7 @@ a {
     left: 0;
     background-color: #ffffff;
     padding: 24px 24px 40px 16px;
-    display: none;
+    display: flex;
         flex-direction: column;
         
 }
@@ -189,6 +189,7 @@ border-radius: 50%;
 .current {}
 
 .mob-menu-contacts {
+    margin-top: auto;
     margin-bottom: 48px;
 }
 
@@ -400,6 +401,9 @@ screen and (-webkit-min-device-pixel-ratio: 2) {
     padding-top: 96px;
     padding-bottom: 96px; 
 }
+.container {
+    width: 296px;
+}
 
 .team-title {
     margin: 0 0 72px;
@@ -434,8 +438,8 @@ screen and (-webkit-min-device-pixel-ratio: 2) {
 
 .team-photo {
     display: block;
-    width: 100%;
-    height: 260px;
+  min-width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center top;
 }
@@ -443,6 +447,7 @@ screen and (-webkit-min-device-pixel-ratio: 2) {
 .team-card-body {
     padding: 32px 0;
     text-align: center;
+   
 }
 
 .team-name {
@@ -622,7 +627,7 @@ transform: translateY(0%);
 
 
 .footer-info {
-    margin-right: 0px;
+    margin-right: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -652,6 +657,7 @@ transform: translateY(0%);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    text-align: left;
     /* padding-bottom: 72px; */
     
 }
@@ -730,8 +736,7 @@ transform: translateY(0%);
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    width: 100%;
-    min-width: 320px;
+  
     
 }
 
@@ -741,7 +746,7 @@ transform: translateY(0%);
     /* margin-bottom: 16px; */
     font-weight: 500;
     color: #ffffff;
-    padding-bottom: 16px;
+    /* padding-bottom: 16px; */
 }
 
 .footer-form {
@@ -820,8 +825,10 @@ transform: translateY(0%);
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px; */
+    width: 288px;
+    /* min-height: 584px; */
+    min-height: 623px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
         background-color: #FCFCFC;
@@ -831,7 +838,8 @@ transform: translateY(0%);
         transform: translate(-50%, -50%);
         padding: 24px;
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 72px 24px 24px 24px;
+        /* padding: 72px 24px 24px 24px; */
+        padding: 72px 16px 24px 16px;
         /* margin-bottom: 8px; */
 
         
@@ -891,7 +899,8 @@ fill: #ffffff
         text-align: center;
         color: #2E2F42;
         text-align: center;
-        min-width: 360px;
+        /* min-width: 360px; */
+        min-width: 256px;
         /* margin-top: 72px;
         margin-bottom: 16px; */
 
@@ -1082,11 +1091,6 @@ fill: #F4F4FD;
 
 @media screen and (min-width:768px) {
 
-    .header {
-            padding-top: 24px;
-            padding-bottom: 24px;
-        }
-
                 .menu-open-btn {
                     display: none;
                 }
@@ -1186,7 +1190,9 @@ fill: #F4F4FD;
                 text-align: left;
         }
 
-    
+    .container {
+        width: 584px;
+    }
     .team-list {
         gap: 64px 24px;
     
@@ -1211,18 +1217,18 @@ fill: #F4F4FD;
 
                
                            
-                               /* контейнер внутри футера шириной под макет 768 */
+                               
                                .footer .container {
                                    width: 100%;
-                                   /* перебиваем твой .container { width: 320px; } */
+                                 
                                    max-width: 736px;
-                                   /* 768 - 16 - 16 */
+                                
                                    padding-left: 16px;
                                    padding-right: 16px;
                                    margin: 0 auto;
                                }
             
-                               /* верх: 2 колонки (264px слева + адаптив справа) */
+                              
                                .footer .footer-wrap {
                                    display: grid;
                                    grid-template-columns: 264px 1fr;
@@ -1232,13 +1238,13 @@ fill: #F4F4FD;
                                    width: 584px;
                                }
             
-                               /* левая колонка — логотип+текст (убиваем центрирование мобилки) */
+                             
                                .footer .footer-info {
                                    display: flex;
                                    flex-direction: column;
                                    align-items: flex-start !important;
                                    text-align: left !important;
-                                   margin-right: 0;
+                                   margin-right: 80px;
                                    /* на всякий */
                                }
             
@@ -1247,7 +1253,7 @@ fill: #F4F4FD;
                                    padding: 0;
                                }
             
-                               /* правая колонка — Social media (тоже слева) */
+                               
                                .footer .footer-social {
                                    display: flex;
                                    flex-direction: column;
@@ -1261,7 +1267,7 @@ fill: #F4F4FD;
                                    gap: 16px;
                                }
             
-                               /* нижний ряд — Subscribe на всю ширину */
+                               
                                .footer .footer-subscribe {
                                    grid-column: 1 / -1;
                                    margin-left: 0;
@@ -1272,11 +1278,11 @@ fill: #F4F4FD;
                                }
             
                                .footer .footer-text-subscribe {
-                                   margin: 0 0 16px;
+                                   margin: 0;
                                    text-align: left;
                                }
             
-                               /* форма в одну линию: инпут 264px + 24px + кнопка */
+                               
                                .footer .footer-form {
                                    width: 100%;
                                    display: flex;
@@ -1301,6 +1307,15 @@ fill: #F4F4FD;
                                    min-width: 165px;
                                    height: 40px;
                                }
+
+                                                   .modal {
+                                                    width: 408px;
+                                                    min-height: 584px;
+                                                    padding: 72px 24px 24px 24px;
+                                                   }    
+                                                   .modal-text {
+                                                    min-width: 360px;
+                                                                                                   }                            .
                            
     }
 
@@ -1308,10 +1323,17 @@ fill: #F4F4FD;
 
 
 @media screen and (min-width:1158px) {
-.header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .header-contacts-link {
+        font-size: 16px;
+       
+    }
 
     .hero {
         padding: 188px 0;
@@ -1344,6 +1366,11 @@ fill: #F4F4FD;
         padding-left: 15px;
         padding-right: 15px;
     }
+
+        .features {
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
          .features-icon-box {
              display: flex;
          }
@@ -1363,6 +1390,10 @@ fill: #F4F4FD;
 
     }
 
+        .team {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
         .team-list {
             gap: 24px;
         }
@@ -1371,7 +1402,8 @@ fill: #F4F4FD;
         }
 
     .portfolio {
-        padding: 120px 0;
+        padding-top: 60px;
+        padding-bottom: 120px;
     }
 
         .portfolio-list {
@@ -1380,64 +1412,6 @@ fill: #F4F4FD;
         .portfolio-item {
             width: calc((100% - 48px) / 3);
         }
-        
-    /* .footer {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-    .footer .container {
-        max-width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 0 auto;
-    }
-
-    .footer-wrap {
-        display: flex;
-        align-items: baseline;
-    .footer .container,
-        .footer-wrap {
-            display: flex;
-        align-items: baseline;
-        }
-
-    .footer-info {
-        margin-right: 120px;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .footer-social {
-        align-items: flex-start;
-        text-align: left;
-    }
-    .footer-social-list {
-        padding-bottom: 72px;
-    }
-
-    .footer-subscribe {
-        margin-left: 80px;
-        align-items: flex-start;
-    }
-
-    .footer-form {
-        flex-direction: row;
-        gap: 24px;
-        width: auto;
-    }
-
-    .footer-input {
-        width: 264px;
-    }
-
-    .footer-btn {
-        margin: 0;
-    }
-    .footer-text {
-        padding-bottom: 72px;  
-                
-    }
-    } */
 
     
          
@@ -1476,7 +1450,7 @@ fill: #F4F4FD;
             
              .footer-info {
                  flex: 0 0 264px;
-                 margin-right: 120px;
+                 margin-right: 80px;
                  display: flex;
                  flex-direction: column;
                  align-items: flex-start;
@@ -1542,4 +1516,13 @@ fill: #F4F4FD;
                  min-width: 165px;
                  height: 40px;
              }
+                .modal {
+                    width: 408px;
+                    min-height: 584px;
+                    padding: 72px 24px 24px 24px;
+                }
+
+                                .modal-text {
+                                    min-width: 360px;
+                                }
          }
